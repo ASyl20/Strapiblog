@@ -26,7 +26,9 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:strapi": "cd node_modules/gatsby-source-strapi && npm run build",
+    "install": "npm run build:strapi"
   },
   "devDependencies": {
     "prettier": "^1.14.2"
