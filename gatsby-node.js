@@ -37,7 +37,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     result.data.allStrapiArticle.edges.forEach(({ node }) => {
       createPage({
         path: `/${node.id}`,
-        component: path.resolve(`src/pages/article.js`),
+        component: path.resolve(`src/templates/article.js`),
         context: {
           id: node.id,
         },
@@ -63,7 +63,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     result.data.allStrapiUser.edges.forEach(({ node }) => {
       createPage({
         path: `/authors/${node.id}`,
-        component: path.resolve(`src/pages/user.js`),
+        component: path.resolve(`src/templates/user.js`),
         context: {
           id: node.id,
         },
